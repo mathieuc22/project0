@@ -1,0 +1,30 @@
+body {
+  background-color: #282a36;
+  color: #bcc2cd;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.jumbotron, .col-sm  {
+  background-color: #383a59;
+}
+
+.col-sm {
+  padding: 10px;
+  margin: 4px;
+}
+
+
+h1 {
+  color: #bd93f9;
+}
+
+h5 {
+  color: #ff5555;
+}
+
+a {
+  color: #50fa7b;
+}
+a:hover {
+  color: #237036;
+}
