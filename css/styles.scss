@@ -1,0 +1,96 @@
+$bg1-color: #282a36;
+$bg2-color: #383a59;
+$primary-color: #bcc2cd;
+$title-color: #bd93f9;
+$title-sm-color: #ff5555;
+$link-color: #50fa7b;
+$link-hover-color: #237036;
+$box-padding: 10px;
+$box-margin: 4px;
+
+@media screen and (max-width: 600px) {
+  div.jumbotron {
+    display: none;
+  }
+}
+
+%bg-shared {
+  background-color: $bg2-color;
+}
+
+body {
+  background-color: $bg1-color;
+  color: $primary-color;
+}
+
+table {
+  width: 100%;
+  background-color: $bg2-color;
+  margin-bottom: 15px;
+}
+
+th, td {
+  border-bottom: 1px solid $title-color;
+}
+
+tr {
+  color: $title-color;
+}
+
+tr:hover {
+  background-color: $bg1-color;
+}
+
+div img {
+  width: 60%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+}
+
+nav {
+  @extend %bg-shared;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .15);
+}
+
+.jumbotron {
+  @extend %bg-shared;
+}
+
+.col-sm {
+  @extend %bg-shared;
+  padding: $box-padding;
+  margin: $box-margin;
+}
+
+h1, h2 {
+  color: $title-color;
+}
+
+a {
+  color: $link-color;
+}
+a:hover {
+  color: $link-hover-color;
+}
+
+.img-card {
+
+  margin: $box-margin;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  h5 {
+    color: $title-sm-color;
+  }
+
+  p {
+    font-style: italic;
+  }
+
+}
