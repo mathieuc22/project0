@@ -4,7 +4,7 @@ Web Programming with Python and JavaScript
 
 ## Goal
 
-Build your personal Website to tell the world who your are. Of course we learn more about people with their interests.
+Build your personal Website to tell the world who your are.
 
 ## Content
 
