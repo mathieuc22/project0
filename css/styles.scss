@@ -1,12 +1,14 @@
-$bg1-color: #282a36;
-$bg2-color: #383a59;
-$primary-color: #bcc2cd;
-$title-color: #bd93f9;
-$title-sm-color: #ff5555;
-$link-color: #50fa7b;
-$link-hover-color: #237036;
-$box-padding: 10px;
-$box-margin: 4px;
+//variables
+$color-background: #282a36;
+$color-foreground: #bcc2cd;
+$color-comment: #383a59;
+$color-red: #ff5555;
+$color-pink: #ff79c6;
+$color-purple: #bd93f9;
+$color-green: #50fa7b;
+$padding-md: 10px;
+$margin-md: 10px;
+$margin-sm: 4px;
 
 @media screen and (max-width: 600px) {
   div.jumbotron {
@@ -14,31 +16,42 @@ $box-margin: 4px;
   }
 }
 
+//shared
 %bg-shared {
-  background-color: $bg2-color;
+  background-color: $color-comment;
 }
 
+%hover {
+  color: $color-background;
+  background-color: $color-purple;
+}
+
+//content
 body {
-  background-color: $bg1-color;
-  color: $primary-color;
+  background-color: $color-background;
+  color: $color-foreground;
+}
+
+.btn {
+  color: $color-purple;
+  border: 1px solid $color-purple;
+}
+
+.btn:hover {
+  @extend %hover;
 }
 
 table {
   width: 100%;
-  background-color: $bg2-color;
   margin-bottom: 15px;
 }
 
 th, td {
-  border-bottom: 1px solid $title-color;
-}
-
-tr {
-  color: $title-color;
+  border-bottom: 1px solid $color-purple;
 }
 
 tr:hover {
-  background-color: $bg1-color;
+  @extend %hover;
 }
 
 div img {
@@ -47,13 +60,9 @@ div img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 15px;
+  margin-bottom: $margin-md;
 }
 
-nav {
-  @extend %bg-shared;
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .15);
-}
 
 .jumbotron {
   @extend %bg-shared;
@@ -61,24 +70,25 @@ nav {
 
 .col-sm {
   @extend %bg-shared;
-  padding: $box-padding;
-  margin: $box-margin;
+  padding: $padding-md;
+  margin: $margin-sm;
 }
 
 h1, h2 {
-  color: $title-color;
+  color: $color-purple;
 }
 
 a {
-  color: $link-color;
+  color: $color-purple;
 }
+
 a:hover {
-  color: $link-hover-color;
+  @extend %hover;
 }
 
 .img-card {
 
-  margin: $box-margin;
+  margin: $margin-sm;
 
   img {
     width: 100%;
@@ -86,11 +96,27 @@ a:hover {
   }
 
   h5 {
-    color: $title-sm-color;
+    color: $color-foreground;
   }
 
   p {
     font-style: italic;
   }
 
+}
+
+
+nav {
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .15);
+  a{
+    border-radius: 4px
+  }
+  .nav-green {
+    color: $color-background;
+    background-color: $color-green;
+    border-radius: 4px
+  }
+  .nav-green:hover {
+    @extend %hover;
+  }
 }
